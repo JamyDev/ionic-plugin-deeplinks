@@ -190,6 +190,7 @@ var IonicDeeplink = {
     // On custom url protocols, leave the host in the url
     if (!['http', 'https'].includes(data.scheme)) {
       data.path = '/' + data.host + data.path;
+      data.host = '';
     }
 
     var restOfUrl = data.url.slice(data.url.indexOf(data.host) + data.host.length);
